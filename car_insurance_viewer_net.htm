@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wireframe - ביטוח טסלה</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;700;900&display=swap');
+        
+        body {
+            font-family: 'Heebo', sans-serif;
+            background-image: radial-gradient(#e5e7eb 1px, transparent 1px);
+            background-size: 20px 20px;
+            background-color: #ffffff;
+        }
+
+        .wireframe-box {
+            background-color: #f9fafb;
+            border: 2px dashed #9ca3af;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: #9ca3af;
+        }
+
+        .section-divider {
+            border-bottom: 2px solid #e5e7eb;
+        }
+        
+        /* Bestie Brand Colors */
+        .bg-bestie-red {
+            background-color: #ff2000;
+        }
+        .text-bestie-red {
+            color: #ff2000;
+        }
+        .hover-bg-bestie-dark {
+            transition: background-color 0.3s;
+        }
+        .hover-bg-bestie-dark:hover {
+            background-color: #cc1a00;
+        }
+        
+        /* Custom Button Styles */
+        .btn-primary {
+            background-color: #ff2000;
+            color: white;
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            background-color: #cc1a00;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        /* Outline Red (For Quote Actions) */
+        .btn-outline-red {
+            background-color: white;
+            color: #ff2000;
+            border: 2px solid #ff2000;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-red:hover {
+            background-color: #ff2000;
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* Outline Black (For Info Actions) */
+        .btn-outline-black {
+            background-color: white;
+            color: #111827; /* gray-900 */
+            border: 2px solid #111827;
+            transition: all 0.3s ease;
+        }
+        .btn-outline-black:hover {
+            background-color: #111827;
+            color: white;
+            transform: translateY(-1px);
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- HEADER -->
+    <header class="border-b-2 border-gray-800 py-4 sticky top-0 bg-white/95 z-50 shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 flex justify-between items-center">
+            <div class="flex items-center gap-4">
+                <!-- Logo Placeholder using Bestie Red -->
+                <div class="font-black text-2xl tracking-tighter text-bestie-red">bestie</div>
+                <span class="text-xs font-normal text-gray-500 self-end mb-1">(Wireframe)</span>
+            </div>
+            <nav class="hidden md:flex gap-6 text-sm font-bold text-gray-500">
+                <a href="#" class="hover:text-gray-900 hover:underline">ביטוח רכב</a>
+                <a href="#" class="hover:text-gray-900 hover:underline">ביטוח דירה</a>
+                <a href="#" class="hover:text-gray-900 hover:underline">ביטוח נסיעות</a>
+                <a href="#" class="hover:text-gray-900 hover:underline">משכנתא</a>
+            </nav>
+            <div class="md:hidden">
+                <i class="fas fa-bars text-xl"></i>
+            </div>
+        </div>
+    </header>
+
+    <!-- BREADCRUMBS -->
+    <div class="bg-white/80 py-2 border-b border-gray-200 backdrop-blur-sm">
+        <div class="max-w-6xl mx-auto px-4 text-xs text-gray-500 font-mono">
+            דף הבית &gt; ביטוח רכב &gt; <span class="text-gray-900 font-bold bg-yellow-100 px-1">ביטוח טסלה</span>
+        </div>
+    </div>
+
+    <!-- HERO SECTION -->
+    <div class="py-12 md:py-20 section-divider bg-white relative overflow-hidden">
+        <div class="max-w-6xl mx-auto px-4 flex flex-col md:flex-row items-center gap-12">
+            
+            <!-- Right Side: Content -->
+            <div class="md:w-1/2 text-right z-10">
+                <h1 class="text-4xl md:text-6xl font-black text-gray-900 mb-4 leading-tight">
+                    ביטוח לרכב <span class="text-bestie-red">טסלה</span>
+                </h1>
+                
+                <h2 class="text-xl md:text-2xl font-bold text-gray-700 mb-6">
+                    השוואת מחירי ביטוח לרכב טסלה, עם הבדלי הכיסוי שחשוב להכיר
+                </h2>
+                
+                <p class="text-lg text-gray-600 mb-10 leading-relaxed max-w-xl">
+                    גם כשמדובר באותו הרכב, הצעות ביטוח שונות עשויות לכלול תנאי כיסוי שונים. בעמוד זה תוכלו לקבל תמונה ברורה של הבדלי הכיסוי שחשוב להכיר עבור הטסלה שלכם, וכן להשוות בין הצעות ביטוח של חברות הביטוח המובילות בשוק - לחיסכון של אלפי שקלים בתוך 2 דקות.
+                </p>
+                
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <!-- Primary CTA - Adjusted Proportions -->
+                    <button class="btn-primary px-6 py-3 rounded-full font-bold text-lg shadow-lg w-full sm:w-auto text-center">
+                    להשוואת מחירי ביטוח לטסלה
+                    </button>
+                    
+                    <!-- Secondary CTA - Black Outline -->
+                    <button class="btn-outline-black px-6 py-3 rounded-full font-bold transition w-full sm:w-auto flex items-center justify-center gap-2 group shadow-sm">
+                        לצפייה בהבדלי הכיסוי 
+                        <i class="fas fa-chevron-down group-hover:translate-y-1 transition-transform"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Left Side: Image Placeholder -->
+            <div class="md:w-1/2 w-full flex justify-center md:justify-end relative">
+                <div class="absolute top-0 left-10 w-64 h-64 bg-gray-100 rounded-full blur-3xl -z-10"></div>
+                <div class="relative w-full max-w-md">
+                    <div class="wireframe-box h-80 w-full rounded-2xl bg-white border-4 border-gray-100 shadow-2xl relative overflow-hidden group">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <i class="fas fa-car text-9xl text-gray-200 group-hover:text-gray-300 transition-colors duration-500"></i>
+                        </div>
+                        <div class="absolute top-10 right-10 bg-white p-3 rounded-lg shadow-lg border border-gray-100 flex items-center gap-2">
+                            <i class="fas fa-shield-alt text-bestie-red"></i>
+                            <span class="text-xs font-bold text-gray-600">מקיף + חובה</span>
+                        </div>
+                        <div class="absolute bottom-10 left-10 bg-white p-3 rounded-lg shadow-lg border border-gray-100 flex items-center gap-2">
+                            <i class="fas fa-bolt text-yellow-400"></i>
+                            <span class="text-xs font-bold text-gray-600">כיסוי סוללה</span>
+                        </div>
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 text-gray-400 font-mono text-sm bg-white/80 px-2 py-1 rounded">
+                            [Image: Tesla Car Illustration]
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- OVERVIEW / ICONS GRID (NO CTA) -->
+    <div class="py-12 section-divider bg-white">
+        <div class="max-w-6xl mx-auto px-4">
+            <div class="text-center mb-10">
+                <!-- UPDATED TITLE HERE -->
+                <h2 class="text-2xl font-bold mb-2 uppercase tracking-wide">נקודות שחשוב להכיר לפני שסוגרים ביטוח רכב לטסלה</h2>
+                <p class="text-gray-500 max-w-3xl mx-auto">בין חברות הביטוח קיימים הבדלים בכיסויים ובאופן מימושם - אלה הנקודות המרכזיות שחשוב להכיר לפני שסוגרים ביטוח לרכב הטסלה שלכם:</p>
+            </div>
+
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <!-- Item 1 -->
+                <div class="flex flex-col items-center text-center p-6 border-2 border-gray-200 border-dashed rounded-lg hover:border-gray-400 transition bg-gray-50 group hover:bg-white h-full">
+                    <div class="w-16 h-16 bg-white border-2 border-gray-200 rounded-full flex items-center justify-center mb-4 shadow-sm text-2xl group-hover:border-bestie-red group-hover:text-bestie-red transition-colors">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="font-bold mb-2 text-lg">מוסך והסדרי תיקון</h3>
+                    <p class="text-sm text-gray-500 leading-snug">בדיקת זכאות לתיקון במוסך מורשה יבואן לצד רשימת מוסכי ההסדר.</p>
+                </div>
+                <!-- Item 2 -->
+                <div class="flex flex-col items-center text-center p-6 border-2 border-gray-200 border-dashed rounded-lg hover:border-gray-400 transition bg-gray-50 group hover:bg-white h-full">
+                    <div class="w-16 h-16 bg-white border-2 border-gray-200 rounded-full flex items-center justify-center mb-4 shadow-sm text-2xl group-hover:border-bestie-red group-hover:text-bestie-red transition-colors">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="font-bold mb-2 text-lg">חלפים מקוריים</h3>
+                    <p class="text-sm text-gray-500 leading-snug">וידוא שימוש בחלפים מקוריים חדשים לשמירה על ערך הרכב.</p>
+                </div>
+                <!-- Item 3 -->
+                <div class="flex flex-col items-center text-center p-6 border-2 border-gray-200 border-dashed rounded-lg hover:border-gray-400 transition bg-gray-50 group hover:bg-white h-full">
+                    <div class="w-16 h-16 bg-white border-2 border-gray-200 rounded-full flex items-center justify-center mb-4 shadow-sm text-2xl group-hover:border-bestie-red group-hover:text-bestie-red transition-colors">
+                        <i class="fas fa-info-circle"></i>
+                    </div>
+                    <h3 class="font-bold mb-2 text-lg">טוטאל-לוס / גניבה</h3>
+                    <p class="text-sm text-gray-500 leading-snug">בירור אחוז הנזק הקובע השבתה מלאה (טוטאל-לוס) וגובה הפיצוי.</p>
+                </div>
+                <!-- Item 4 -->
+                <div class="flex flex-col items-center text-center p-6 border-2 border-gray-200 border-dashed rounded-lg hover:border-gray-400 transition bg-gray-50 group hover:bg-white h-full">
+                    <div class="w-16 h-16 bg-white border-2 border-gray-200 rounded-full flex items-center justify-center mb-4 shadow-sm text-2xl group-hover:border-bestie-red group-hover:text-bestie-red transition-colors">
+                        <i class="fas fa-hand-holding-usd"></i>
+                    </div>
+                    <h3 class="font-bold mb-2 text-lg">השתתפות עצמית</h3>
+                    <p class="text-sm text-gray-500 leading-snug">בדיקת גובה ההשתתפות העצמית בעת בחירה במוסך הסדר.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- DEEP DIVE (CONTENT) -->
+    <div class="py-12 section-divider bg-gray-50/50">
+        <div class="max-w-6xl mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-12 text-gray-800 uppercase tracking-wide text-center">פירוט הכיסויים המרכזיים</h2>
+            <div class="space-y-16 mb-12">
+                
+                <!-- Block 1: Garage -->
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="md:w-1/2 w-full order-2 md:order-1">
+                        <h3 class="text-xl font-bold mb-3 flex items-center gap-3">
+                            <span class="bg-black text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">1</span>
+                            מוסך והסדרי תיקון
+                        </h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-4 pl-4 border-r-4 border-gray-200 mr-2">
+                            לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק, אנס מופז ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסת עד לכנו.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 w-full order-1 md:order-2">
+                        <div class="wireframe-box h-64 w-full bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-tools mb-3 opacity-50 text-4xl"></i>
+                            <span class="text-sm font-mono uppercase tracking-widest">Image: Tesla Service / Garage</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Block 2: Original Parts -->
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="md:w-1/2 w-full order-1">
+                        <div class="wireframe-box h-64 w-full bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-cogs mb-3 opacity-50 text-4xl"></i>
+                            <span class="text-sm font-mono uppercase tracking-widest">Image: Original Parts</span>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 w-full order-2">
+                        <h3 class="text-xl font-bold mb-3 flex items-center gap-3">
+                            <span class="bg-black text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">2</span>
+                            חלפים מקוריים
+                        </h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-4 pl-4 border-r-4 border-gray-200 mr-2">
+                            קולורס מונפרד אדנדום סילקוף, מרגשי ומרגשח. עמחליף סחטיר בלובק. תצפית חרמש למרקו. לורם איפסום דולור סיט אמט, קונסקטורר אדיפיסינג אלית. קולורס מונפרד אדנדום סילקוף, מרגשי ומרגשח. עמחליף סחטיר בלובק. תצפית חרמש למרקו.
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Block 3: Total Loss -->
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="md:w-1/2 w-full order-2 md:order-1">
+                        <h3 class="text-xl font-bold mb-3 flex items-center gap-3">
+                            <span class="bg-black text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">3</span>
+                            טוטאל-לוס או גניבה
+                        </h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-4 pl-4 border-r-4 border-gray-200 mr-2">
+                             דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק, אנס מופז ליבם סולגק. בראיט ולחת צורק מונחף, בגורמי מגמש. תרבנך וסת עד לכנו. סת אלמנקום ניסי נון ניבאה.
+                        </p>
+                    </div>
+                    <div class="md:w-1/2 w-full order-1 md:order-2">
+                        <div class="wireframe-box h-64 w-full bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-car-crash mb-3 opacity-50 text-4xl"></i>
+                            <span class="text-sm font-mono uppercase tracking-widest">Image: Car Accident / Theft</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Block 4: Deductible -->
+                <div class="flex flex-col md:flex-row gap-8 items-center">
+                    <div class="md:w-1/2 w-full order-1">
+                        <div class="wireframe-box h-64 w-full bg-white rounded-lg shadow-sm">
+                            <i class="fas fa-file-invoice-dollar mb-3 opacity-50 text-4xl"></i>
+                            <span class="text-sm font-mono uppercase tracking-widest">Image: Deductible Cost</span>
+                        </div>
+                    </div>
+                    <div class="md:w-1/2 w-full order-2">
+                        <h3 class="text-xl font-bold mb-3 flex items-center gap-3">
+                            <span class="bg-black text-white w-8 h-8 rounded-full flex items-center justify-center text-sm font-bold">4</span>
+                            השתתפות עצמית
+                        </h3>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-4 pl-4 border-r-4 border-gray-200 mr-2">
+                            נולום ארווס סאפיאן - פוסיליס קוויס, אקווזמן קוור אליב. סת אלמנקום ניסי נון ניבאה. דס איאקוליס וולופטה דיאם. וסטיבולום אט דולור, קראס אגת לקטוס וואל אאוגו וסטיבולום סוליסי טידום בעליק, אנס מופז ליבם סולגק.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Standalone Button - Red and Prominent -->
+            <div class="text-center">
+                <button class="btn-primary px-10 py-3 rounded-full font-bold text-lg shadow-lg">
+                   עכשיו כשברור מה חשוב: בואו להשוות מחירים
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- COMPANY COMPARISON TABLE -->
+    <div class="py-12 section-divider bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <!-- TITLE UPDATED HERE -->
+            <h2 class="text-2xl font-bold mb-8 text-gray-800 uppercase tracking-wide text-center">השוואת כיסויי ביטוח לטסלה מבין חברות הביטוח המובילות בישראל</h2>
+            <div class="overflow-x-auto border border-gray-200 rounded-lg shadow-sm">
+                <table class="w-full text-sm text-right border-collapse">
+                    <thead class="bg-gray-100 text-gray-700">
+                        <tr>
+                            <th class="p-4 border-b border-gray-200">חברת הביטוח</th>
+                            <th class="p-4 border-b border-gray-200 hidden md:table-cell">מוסך והסדרים</th>
+                            <th class="p-4 border-b border-gray-200 hidden md:table-cell">חלפים מקוריים</th>
+                            <th class="p-4 border-b border-gray-200 hidden md:table-cell">טוטאל-לוס</th>
+                            <th class="p-4 border-b border-gray-200">השתתפות עצמית</th>
+                            <th class="p-4 border-b border-gray-200"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-100 bg-white">
+                        <!-- Company 1 -->
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="p-4 font-bold flex items-center gap-3">
+                                <div class="w-8 h-8 bg-blue-100 rounded-full flex items-center justify-center text-blue-600 text-xs">A</div>
+                                <span>ביטוח ישיר</span>
+                            </td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">כל מוסך</td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">שנתיים ראשונות</td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">60%</td>
+                            <td class="p-4 font-bold text-gray-900">₪500</td>
+                            <td class="p-4 text-left">
+                                <button class="btn-outline-red px-4 py-2 rounded-full text-xs font-bold shadow hover:bg-red-700 transition whitespace-nowrap">לקבלת הצעת מחיר</button>
+                            </td>
+                        </tr>
+                        <!-- Company 2 -->
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="p-4 font-bold flex items-center gap-3">
+                                <div class="w-8 h-8 bg-green-100 rounded-full flex items-center justify-center text-green-600 text-xs">B</div>
+                                <span>הפניקס</span>
+                            </td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">מוסכי הסדר</td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">עד 3 שנים</td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">50%</td>
+                            <td class="p-4 font-bold text-gray-900">₪600</td>
+                            <td class="p-4 text-left">
+                                <button class="btn-outline-red px-4 py-2 rounded-full text-xs font-bold shadow hover:bg-red-700 transition whitespace-nowrap">לקבלת הצעת מחיר</button>
+                            </td>
+                        </tr>
+                        <!-- Company 3 -->
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="p-4 font-bold flex items-center gap-3">
+                                <div class="w-8 h-8 bg-purple-100 rounded-full flex items-center justify-center text-purple-600 text-xs">C</div>
+                                <span>הראל</span>
+                            </td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">כל מוסך</td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">בתוספת תשלום</td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">60%</td>
+                            <td class="p-4 font-bold text-gray-900">₪450</td>
+                            <td class="p-4 text-left">
+                                <button class="btn-outline-red px-4 py-2 rounded-full text-xs font-bold shadow hover:bg-red-700 transition whitespace-nowrap">לקבלת הצעת מחיר</button>
+                            </td>
+                        </tr>
+                        <!-- Company 4 -->
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="p-4 font-bold flex items-center gap-3">
+                                <div class="w-8 h-8 bg-orange-100 rounded-full flex items-center justify-center text-orange-600 text-xs">D</div>
+                                <span>מגדל</span>
+                            </td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">מוסכי הסדר</td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">שנה ראשונה</td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">55%</td>
+                            <td class="p-4 font-bold text-gray-900">₪800</td>
+                            <td class="p-4 text-left">
+                                <button class="btn-outline-red px-4 py-2 rounded-full text-xs font-bold shadow hover:bg-red-700 transition whitespace-nowrap">לקבלת הצעת מחיר</button>
+                            </td>
+                        </tr>
+                        <!-- Company 5 -->
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="p-4 font-bold flex items-center gap-3">
+                                <div class="w-8 h-8 bg-teal-100 rounded-full flex items-center justify-center text-teal-600 text-xs">E</div>
+                                <span>מנורה</span>
+                            </td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">כל מוסך</td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">שנתיים ראשונות</td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">50%</td>
+                            <td class="p-4 font-bold text-gray-900">₪750</td>
+                            <td class="p-4 text-left">
+                                <button class="btn-outline-red px-4 py-2 rounded-full text-xs font-bold shadow hover:bg-red-700 transition whitespace-nowrap">לקבלת הצעת מחיר</button>
+                            </td>
+                        </tr>
+                        <!-- Company 6 -->
+                        <tr class="hover:bg-gray-50 transition">
+                            <td class="p-4 font-bold flex items-center gap-3">
+                                <div class="w-8 h-8 bg-indigo-100 rounded-full flex items-center justify-center text-indigo-600 text-xs">F</div>
+                                <span>Weasure</span>
+                            </td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">מוסכי הסדר</td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">בתוספת תשלום</td>
+                            <td class="p-4 hidden md:table-cell text-gray-600">60%</td>
+                            <td class="p-4 font-bold text-gray-900">₪600</td>
+                            <td class="p-4 text-left">
+                                <button class="btn-outline-red px-4 py-2 rounded-full text-xs font-bold shadow hover:bg-red-700 transition whitespace-nowrap">לקבלת הצעת מחיר</button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div class="mt-8 text-center">
+                <!-- UPDATED BUTTON TEXT HERE -->
+                <button class="btn-primary px-10 py-3 rounded-full font-bold shadow-lg transition border-2 border-bestie-red">
+                    להשוואת מחירים בין חברות הביטוח &larr;
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- TRUST & PROCESS (Split into 2 sections + Gentle CTA) -->
+    <div class="py-16 section-divider bg-gray-50 text-center">
+        <div class="max-w-4xl mx-auto px-4">
+            
+            <!-- Part 1: Why Bestie (Benefits) -->
+            <div class="mb-20">
+                <h2 class="text-3xl font-bold mb-12 text-gray-800">למה להשוות מחירי ביטוח בבסטי?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Benefit 1 -->
+                    <div class="flex flex-col items-center bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                            <!-- Globe Icon Rep -->
+                            <i class="fas fa-globe-americas text-4xl text-gray-800"></i>
+                            <div class="absolute w-16 h-16 bg-red-100 rounded-full opacity-20 transform translate-x-1 translate-y-1"></div>
+                        </div>
+                        <h4 class="font-bold text-xl mb-3 text-gray-800">ככה עושים את זה היום</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed px-2">יותר מ-60% מפוליסות הביטוח בעולם מתחילות במנועי השוואה שמביאים לחיסכון אדיר. ועכשיו – גם בישראל!</p>
+                    </div>
+                    
+                    <!-- Benefit 2 -->
+                    <div class="flex flex-col items-center bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="w-16 h-16 mb-4 flex items-center justify-center relative">
+                            <!-- Lock Icon Rep -->
+                            <i class="fas fa-lock text-4xl text-gray-800 z-10"></i>
+                            <i class="fas fa-key text-bestie-red text-sm absolute bottom-2 right-2 z-20 bg-white rounded-full p-0.5 border border-white"></i>
+                        </div>
+                        <h4 class="font-bold text-xl mb-3 text-gray-800">שומרים על הפרטיות</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed px-2">הסוף להשארת פרטים בעשרות אתרים בבסטי, רק מי שייתן את ההצעה הטובה ביותר, יוכל ליצור איתכם קשר.</p>
+                    </div>
+                    
+                    <!-- Benefit 3 -->
+                    <div class="flex flex-col items-center bg-white p-6 rounded-2xl shadow-sm border border-gray-100">
+                        <div class="w-16 h-16 mb-4 flex items-center justify-center">
+                            <!-- Timer/Coin Icon Rep -->
+                            <div class="relative">
+                                <i class="fas fa-coins text-3xl text-gray-400 absolute top-0 right-0 transform translate-x-2 -translate-y-2"></i>
+                                <i class="far fa-clock text-4xl text-gray-800"></i>
+                            </div>
+                        </div>
+                        <h4 class="font-bold text-xl mb-3 text-gray-800">חוסכים זמן וכסף</h4>
+                        <p class="text-sm text-gray-600 leading-relaxed px-2">לא צריך לבזבז זמן בעשרות אתרים וטלפונים בבסטי תקבלו את כל הצעות הביטוח הכי זולות בחיפוש אחד קצר!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Part 2: How It Works -->
+            <div class="mb-12">
+                <h2 class="text-3xl font-bold mb-12 text-gray-800">איך זה עובד?</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+                    <!-- Step 1 -->
+                    <div class="flex flex-col items-center relative z-10">
+                        <div class="text-6xl font-black text-bestie-red mb-4">01</div>
+                        <h4 class="font-bold text-xl mb-2 text-gray-900">עונים על כמה שאלות</h4>
+                        <p class="text-sm text-gray-600 max-w-xs">רק שאלות שיעזרו לנו לתת לך את ההצעות הכי טובות</p>
+                    </div>
+                    
+                    <!-- Step 2 -->
+                    <div class="flex flex-col items-center relative z-10">
+                        <div class="text-6xl font-black text-bestie-red mb-4">02</div>
+                        <h4 class="font-bold text-xl mb-2 text-gray-900">מקבלים הצעות מכל החברות</h4>
+                        <p class="text-sm text-gray-600 max-w-xs">לפני שתספיקו להכין קפה – כבר נמצא את ההצעה המשתלמת ביותר</p>
+                    </div>
+                    
+                    <!-- Step 3 -->
+                    <div class="flex flex-col items-center relative z-10">
+                        <div class="text-6xl font-black text-bestie-red mb-4">03</div>
+                        <h4 class="font-bold text-xl mb-2 text-gray-900">בוחרים את ההצעה הכי משתלמת</h4>
+                        <p class="text-sm text-gray-600 max-w-xs">משווים בין מחירים כיסויים והטבות של ביטוח רכב ומתחילים לחסוך!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Gentle CTA for Trust Section - Made Prominent/Red -->
+            <div class="mt-8">
+                <button class="btn-primary px-10 py-3 rounded-full font-bold text-lg shadow-lg">
+                    רוצה להתחיל להשוות
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- FAQ SECTION (NO CTA) -->
+    <div class="py-12 section-divider bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <h2 class="text-2xl font-bold mb-8 text-gray-800 uppercase tracking-wide text-center">שאלות נפוצות על ביטוח טסלה</h2>
+            <div class="space-y-4">
+                <!-- Question 1 -->
+                <details class="group bg-gray-50 rounded-lg border border-gray-200">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer p-4 list-none text-gray-800">
+                        <span>מה חשוב לוודא לפני שסוגרים ביטוח לרכב טסלה?</span>
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="text-gray-600 p-4 border-t border-gray-200 text-sm">
+                        חשוב לוודא שהפוליסה כוללת כיסויים ייעודיים לרכב חשמלי (כמו סוללה ועמדת טעינה), כיסוי שמשות מותאם (כולל גג זכוכית), ולוודא את תנאי המוסכים (הסדר מול מורשה יבואן).
+                    </div>
+                </details>
+                <!-- Question 2 -->
+                <details class="group bg-gray-50 rounded-lg border border-gray-200">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer p-4 list-none text-gray-800">
+                        <span>מה ההבדל בין מוסך מורשה לבין מוסך הסדר של חברת הביטוח?</span>
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="text-gray-600 p-4 border-t border-gray-200 text-sm">
+                        מוסך הסדר הוא מוסך שיש לו הסכם עם חברת הביטוח (לרוב הוזלה בהשתתפות עצמית), בעוד מוסך מורשה יבואן מתמחה ספציפית ברכב. בטסלה, חשוב לוודא שהמוסך מוסמך לטפל ברכב חשמלי ושיש לו גישה לחלפים מקוריים.
+                    </div>
+                </details>
+                <!-- Question 3 -->
+                <details class="group bg-gray-50 rounded-lg border border-gray-200">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer p-4 list-none text-gray-800">
+                        <span>האם ביטוח לרכב טסלה כולל טיפול במוסך מורשה?</span>
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="text-gray-600 p-4 border-t border-gray-200 text-sm">
+                        זה משתנה בין הפוליסות. חלקן מאפשרות טיפול במוסך מורשה יבואן כחלק מהכיסוי, בעוד אחרות דורשות תוספת תשלום או מגבילות למוסכי הסדר בלבד. מומלץ להשוות את הסעיף הזה בקפידה.
+                    </div>
+                </details>
+                <!-- Question 4 -->
+                <details class="group bg-gray-50 rounded-lg border border-gray-200">
+                    <summary class="flex justify-between items-center font-bold cursor-pointer p-4 list-none text-gray-800">
+                        <span>מהי הרשימה המלאה של המוסכים המורשים של טסלה בישראל?</span>
+                        <span class="transition group-open:rotate-180"><i class="fas fa-chevron-down"></i></span>
+                    </summary>
+                    <div class="text-gray-600 p-4 border-t border-gray-200 text-sm">
+                        הרשימה מתעדכנת מעת לעת וכוללת את מרכזי השירות הרשמיים של טסלה (כגון בפתח תקווה) וכן מוסכים נוספים שהוסמכו על ידי היבואן (Body Shops) לתיקוני פחחות וצבע.
+                    </div>
+                </details>
+            </div>
+        </div>
+    </div>
+    
+    <!-- NEW SECTION: INTERNAL LINKS (CLEAN & PROFESSIONAL DESIGN) -->
+    <div class="py-12 section-divider bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 text-center">
+            <!-- UPDATED TITLE HERE -->
+            <h2 class="text-2xl font-bold mb-8 text-gray-800 uppercase tracking-wide">מותגי רכב נוספים</h2>
+            
+            <!-- Clean Professional List/Grid -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8">
+                <a href="#" class="flex items-center justify-between p-4 bg-white border border-gray-200 rounded hover:border-gray-400 hover:shadow-sm transition group">
+                    <span class="font-medium text-gray-800 group-hover:text-bestie-red">ביטוח טויוטה</span>
+                    <i class="fas fa-chevron-left text-gray-300 group-hover:text-bestie-red text-xs"></i>
+                </a>
+                <a href="#" class="flex items-center justify-between p-4 bg-white border border-gray-200 rounded hover:border-gray-400 hover:shadow-sm transition group">
+                    <span class="font-medium text-gray-800 group-hover:text-bestie-red">ביטוח מאזדה</span>
+                    <i class="fas fa-chevron-left text-gray-300 group-hover:text-bestie-red text-xs"></i>
+                </a>
+                <a href="#" class="flex items-center justify-between p-4 bg-white border border-gray-200 rounded hover:border-gray-400 hover:shadow-sm transition group">
+                    <span class="font-medium text-gray-800 group-hover:text-bestie-red">ביטוח יונדאי</span>
+                    <i class="fas fa-chevron-left text-gray-300 group-hover:text-bestie-red text-xs"></i>
+                </a>
+                <a href="#" class="flex items-center justify-between p-4 bg-white border border-gray-200 rounded hover:border-gray-400 hover:shadow-sm transition group">
+                    <span class="font-medium text-gray-800 group-hover:text-bestie-red">ביטוח קיה</span>
+                    <i class="fas fa-chevron-left text-gray-300 group-hover:text-bestie-red text-xs"></i>
+                </a>
+                <a href="#" class="flex items-center justify-between p-4 bg-white border border-gray-200 rounded hover:border-gray-400 hover:shadow-sm transition group">
+                    <span class="font-medium text-gray-800 group-hover:text-bestie-red">ביטוח סקודה</span>
+                    <i class="fas fa-chevron-left text-gray-300 group-hover:text-bestie-red text-xs"></i>
+                </a>
+                <a href="#" class="flex items-center justify-between p-4 bg-white border border-gray-200 rounded hover:border-gray-400 hover:shadow-sm transition group">
+                    <span class="font-medium text-gray-800 group-hover:text-bestie-red">ביטוח מיצובישי</span>
+                    <i class="fas fa-chevron-left text-gray-300 group-hover:text-bestie-red text-xs"></i>
+                </a>
+                <a href="#" class="flex items-center justify-between p-4 bg-white border border-gray-200 rounded hover:border-gray-400 hover:shadow-sm transition group">
+                    <span class="font-medium text-gray-800 group-hover:text-bestie-red">ביטוח BYD</span>
+                    <i class="fas fa-chevron-left text-gray-300 group-hover:text-bestie-red text-xs"></i>
+                </a>
+                <a href="#" class="flex items-center justify-between p-4 bg-white border border-gray-200 rounded hover:border-gray-400 hover:shadow-sm transition group">
+                    <span class="font-medium text-gray-800 group-hover:text-bestie-red">ביטוח Geely</span>
+                    <i class="fas fa-chevron-left text-gray-300 group-hover:text-bestie-red text-xs"></i>
+                </a>
+            </div>
+
+            <!-- "All Models" Button -->
+            <div>
+                <a href="#" class="inline-block px-6 py-2 border border-gray-300 rounded-full text-sm font-medium text-gray-600 hover:bg-white hover:text-gray-900 transition bg-white/50">
+                    לכל דגמי הרכב
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- FOOTER -->
+    <footer class="bg-gray-900 text-gray-400 py-10 text-center text-sm border-t-4 border-bestie-red">
+        <div class="mb-4 font-black text-white text-2xl tracking-tighter">bestie</div>
+        <div class="flex justify-center gap-6 mb-8 text-lg">
+            <a href="#" class="hover:text-white transition"><i class="fab fa-facebook"></i></a>
+            <a href="#" class="hover:text-white transition"><i class="fab fa-instagram"></i></a>
+            <a href="#" class="hover:text-white transition"><i class="fab fa-linkedin"></i></a>
+        </div>
+        <p>&copy; 2026 כל הזכויות שמורות לבסטי. ט.ל.ח</p>
+    </footer>
+
+</body>
+</html>
